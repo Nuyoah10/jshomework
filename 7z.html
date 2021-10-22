@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write('练习题2.1');
+			document.write('<br>');
+			let a = 12;
+			let b = 10;
+			if (a > b) {
+				document.write('a大于b');
+			} else if (a === b) {
+				document.write('a等于b');
+			} else if (a < b) {
+				document.write('a小于b');
+			}
+			document.write('<hr>');
+			
+			document.write(' 练习题2.2');
+			document.write('<br>');
+			let i = 55;
+			if (i % 5 == 0) {
+				document.write('可以被5整除' + ' ' + i / 5);
+			} else {
+				document.write('不可以被5整除')
+			}
+			document.write('<hr>');
+			
+			document.write('练习题2.3');
+			document.write('<br>');
+			document.write('100以内偶数：')
+			for (let b = 0; b <= 100; b++) {
+				if (b % 2 == 0) {
+					document.write('  ' + b);
+				}
+			}
+			document.write('<hr>');
+			
+			document.write('练习题2.4');
+			document.write('<br>');
+			document.write('100以内七的倍数：')
+			let j = 0;
+			while (j <= 100) {
+				if (j % 7 == 0) {
+					document.write('  ' + j);
+				}
+				j++;
+			}
+			document.write('<hr>');
+			
+			document.write('练习题2.5');
+			document.write('<br>');
+			let av = 1;
+			let bv = 2;
+			let cv = 3;
+			if (av > bv || av > cv) {
+				document.write('a最大,a的值为：' + av);
+			} else if (bv > cv) {
+				document.write('b最大,b的值为：' + bv);
+			} else {
+				document.write('c最大,c的值为：' + cv);
+			}
+			document.write('<hr>');
+			
+			document.write('练习题3.1');
+			document.write('<br>');
+			document.write('偶 奇')
+			for (let p = 0; p <= 100; p++) {
+				if (p % 2 == 0) {
+					document.write('<br>' + p);
+				} else {
+					document.write('  ' + p);
+				}
+			}
+			document.write('<hr>');
+			
+			document.write('练习题3.2');
+			document.write('<br>');
+			document.write('在控制台中修改函数test([])中括号中填写数数组改变结果');
+			document.write('<br>');
+			function test(a) {
+				let c = '';
+				let b = 0;
+				for (let i = a.length - 1; i >= 0; i--) {
+					b += a[i];
+					if (i == 0) {
+						c += a[i] + '=';
+						continue;
+					}
+					c += a[i] + '+';
+				}
+				document.write(c + b);
+			}
+			test([1, 2, 3, 4, 5, 6]);
+			document.write('<hr>');
+			
+			document.write('第三题');
+			document.write('<br>');
+			document.write('请输入a：');
+			document.write('<input type="text" class="a">');
+			document.write('<br>');
+			document.write('请输入b：');
+			document.write('<input type="text" class="b">');
+			document.write('<br>');
+			document.write('<button>比较</button>');
+			document.write('<p></p >');
+			const inputa = document.querySelector('.a');
+			const inputb = document.querySelector('.b');
+			const pare = document.querySelector('p');
+			document.querySelector('button').onclick = function(e) {
+				if (isNaN(inputa.value) || isNaN(inputb.value) || inputa.value === '' || inputb.value === '') {
+					pare.textContent = '请输入数字';
+				} else {
+					if (Math.floor(inputa.value) > Math.floor(inputb.value)) {
+						pare.textContent = 'a的数值大';
+					} else if (Math.floor(inputa.value) < Math.floor(inputb.value)) {
+						pare.textContent = 'b的数值大';
+					}
+				}
+			}
+			document.write('<hr>');
+		</script>
+	</body>
+</html>
